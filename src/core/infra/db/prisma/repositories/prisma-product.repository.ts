@@ -23,7 +23,7 @@ export class PrismaProductRepository implements ProductRepository {
     return product.map(PrismaProductMapper.toDomain);
   }
   async findOne(id: string): Promise<Product> {
-    const product = await this.prisma.product.findUnique({
+    const product = await this.prisma.product.findFirst({
       where: {
         id,
       },
