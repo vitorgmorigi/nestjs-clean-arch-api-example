@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 
 import { PrismaService } from '../db/prisma/prisma.service';
-import { CategoryRepository } from 'src/core/domain/repositories/category.repository';
+import { CategoryRepository } from '../../domain/repositories/category.repository';
 import { PrismaCategoryRepository } from '../db/prisma/repositories/prisma-category.repository';
-import { ProductRepository } from 'src/core/domain/repositories/product.repository';
+import { ProductRepository } from '../../domain/repositories/product.repository';
 import { PrismaProductRepository } from './prisma/repositories/prisma-product.repository';
 
 @Module({

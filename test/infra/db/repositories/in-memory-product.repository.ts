@@ -1,6 +1,6 @@
-import { ProductRepository } from 'src/core/domain/repositories/product.repository';
+import { ProductRepository } from '../../../../src/core/domain/repositories/product.repository';
 import { Injectable } from '@nestjs/common';
-import { Product } from 'src/core/domain/entities/product.entity';
+import { Product } from '../../../../src/core/domain/entities/product.entity';
 
 @Injectable()
 export class InMemoryProductRepository implements ProductRepository {

@@ -1,14 +1,16 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ProductsController } from './products.controller';
-import { ProductsService } from './products.service';
+import { DatabaseModule } from '../../../db/database.module';
+import { CreateProductUseCase } from '../../../../application/create-product.use-case';
 
 describe('ProductsController', () => {
   let controller: ProductsController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      imports: [DatabaseModule],
       controllers: [ProductsController],
-      providers: [ProductsService],
+      providers: [CreateProductUseCase],
     }).compile();
 
     controller = module.get<ProductsController>(ProductsController);

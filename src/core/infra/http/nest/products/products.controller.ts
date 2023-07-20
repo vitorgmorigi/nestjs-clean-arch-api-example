@@ -1,6 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
-import { CreateProductUseCase } from 'src/core/application/create-product.use-case';
+import { CreateProductUseCase } from '../../../../application/create-product.use-case';
 
 @Controller('products')
 export class ProductsController {
