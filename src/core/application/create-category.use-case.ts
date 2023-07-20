@@ -7,13 +7,11 @@ import { CreateCategoryDto } from '../infra/http/nest/category/dto/create-catego
 export class CreateCategoryUseCase {
   constructor(private categoryRepository: CategoryRepository) {}
 
-  async execute(data: CreateCategoryDto): Promise<Category> {
+  async execute(data: CreateCategoryDto): Promise<void> {
     const category = Category.create({
       name: data.name,
     });
 
     await this.categoryRepository.create(category);
-
-    return category;
   }
 }

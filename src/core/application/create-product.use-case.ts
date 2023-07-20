@@ -14,6 +14,10 @@ export class CreateProductUseCase {
   async execute(data: CreateProductDto): Promise<Product> {
     const category = await this.categoryRepository.findOne(data.categoryId);
 
+    if (!category) {
+      throw new Error('This category does not exists');
+    }
+
     const product = Product.create({
       name: data.name,
       price: data.price,

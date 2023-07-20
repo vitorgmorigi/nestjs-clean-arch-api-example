@@ -5,8 +5,6 @@ import { CategoryRepository } from 'src/core/domain/repositories/category.reposi
 import { PrismaCategoryRepository } from '../db/prisma/repositories/prisma-category.repository';
 import { ProductRepository } from 'src/core/domain/repositories/product.repository';
 import { PrismaProductRepository } from './prisma/repositories/prisma-product.repository';
-// import { ProductRepository } from 'src/core/domain/repositories/product.repository';
-// import { PrismaProductRepository } from '../db/prisma/repositories/prisma-product.repository';
 
 @Module({
   providers: [
